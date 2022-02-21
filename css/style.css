@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background--light: white;
+    --background-dark: rgb(35, 35, 35);
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--background-light);
+}
+body.dark__mode {
+    background-color: var(--background-dark);
+}
+body.dark__mode h1,h2,h3,h4,h5,h6,p {
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    margin-bottom: 1rem;
+    background-color: rgb(175, 0, 0);
+}
+.navbar.dark__mode {
+    background-color: rgb(45, 45, 45);
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+.navbar ul li {
+    padding: 20px;
+    list-style: none;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+.dark__mode__switch {
+    margin-right: 0.5rem;
+}
+.navbar .dark__mode__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dark__mode__switch__btn {
+    transition: all 0.5s;
+}
+.dark__mode__switch__btn--slider {
+    transition: all 0.5s;
+    z-index: 2;
+}
+.dark__mode__switch--icon {
+    transition: all 0.5s;
+}
+.dark__mode__switch__btn {
+    position: relative;
+    width: 3rem;
+    height: 1.5rem;
+    background-color:white;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(255,247,188,1) 63%, rgba(255,226,0,1) 85%);
+    background: linear-gradient(90deg, rgba(120,250,255,1) 0%, rgba(55,218,224,1) 54%, rgba(249,224,27,1) 87%); 
+    background: linear-gradient(90deg, rgba(149,251,255,1) 0%, rgba(48,198,204,1) 21%, rgba(249,224,27,1) 81%);
+    border: solid 2px rgb(100, 100, 100);
+    border: solid 2px black;
+    border-radius: 2rem;
+}
+.dark__mode__switch__btn.dark__mode {
+    position: relative;
+    width: 3rem;
+    height: 1.5rem;
+    background-color:rgb(18, 10, 139);
+    background: linear-gradient(265deg, rgba(129,120,255,1) 0%, rgba(41,29,226,1) 47%, rgba(18,10,139,1) 73%); 
+    border: solid 2px rgb(11, 6, 73);
+    border-radius: 2rem;
+}
+.dark__mode__switch__btn--slider {
+    position: absolute;
+    background-color: rgb(100, 100, 100);
+    background-color: white;
+    width: 1rem;
+    height: 1rem;
+    transform: translate(0, 2px);
+    border-radius: 2rem;
+}
+.dark__mode__switch__btn--slider.dark__mode {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 1rem;
+    height: 1rem;
+    transform: translate(1.7rem, 2px);
+    border-radius: 2rem;
+}
+.dark__mode__switch--icon {
+    position: absolute;
+    transform: translate(1.5rem, -2px);
+}
+.dark__mode__switch--icon.dark__mode {
+    position: absolute;
+    transform: translate(0, -2px);
+}
+.dark__mode__switch--icon::after {
+    content: "☀️"
+}
+.dark__mode__switch--icon.dark__mode::after {
+    content: "🌙"
+}
